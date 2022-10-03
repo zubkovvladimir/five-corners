@@ -56,8 +56,7 @@
     "eslint": "eslint source/js/**/*.js",
     "stylelint": "stylelint \"source/styles/**/*.scss\" --syntax scss",
     "images": "gulp images",
-    "editorconfig": "editorconfig-cli",
-    "prettier": "prettier --write \"source/(scss|js)/**/*.(scss|css|js|json)\""
+    "format": "prettier --write \"source/(scss|js)/**/*.(scss|css|js|json)\""
   },
   "editorconfig-cli": [
     "*.json",
