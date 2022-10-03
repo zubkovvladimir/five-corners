@@ -1,8 +1,8 @@
 .cart-form
-  h2.cart-form__title Корзина
+  h2.cart-form__title.title Корзина
 
   p.login Есть аккаунт?
-    +button('button', 'Войти')
+    +button('Войти')
 
   form(action="" method="method")
     +input('Адрес', 'address')
@@ -18,5 +18,7 @@
       option(value="without") без упаковки
       option(value="standard") стандартная
       option(value="gift") подарочная
-
     +input('Введите комментарий', 'comment')
+
+    include ./selected-products
+

@@ -1,4 +1,4 @@
-mixin button(type='button', text)
+mixin button(text, type='button')
   button.button(type= type)= text
     block
 
@@ -12,5 +12,3 @@ mixin select(name)
 mixin svg(width, height, name, className)
   svg(width=width height=height class=className)
     use(xlink:href="#icon-" + name)
-
-
