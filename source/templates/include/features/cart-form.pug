@@ -20,5 +20,13 @@
       option(value="gift") подарочная
     +input('Введите комментарий', 'comment')
 
-    include ./selected-products
+    .selected-products
+      h2.selected-products__title.title Выбранные товары:
+      include ./products-list
+
+    p.cart-form-total
+      span Итог:
+      span.cart-form-total__sum 3790 руб.
+
+    +button('Купить', 'submit')
 
