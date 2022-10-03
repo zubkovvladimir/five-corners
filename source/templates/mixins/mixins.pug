@@ -2,9 +2,8 @@ mixin button(type='button', text)
   button.button(type= type)= text
     block
 
-mixin inputSearch
-  input.input-search(type="text", name="search", placeholder='Учебное заведение, специальность или профессия')
-  +svg(15, 15, 'search')
+mixin input(type="text", name, placeholder)
+  input.input(type=type, name=name, placeholder=placeholder)
 
 mixin svg(width, height, name, className)
   svg(width=width height=height class=className)

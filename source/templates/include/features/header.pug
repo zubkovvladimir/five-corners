@@ -1,0 +1,19 @@
+header.page-header
+
+    .container
+
+      .page-header__top
+        +button
+          span.visually-hidden Открыть меню
+
+          include ../shared/search
+
+      include ./main-nav
+
+      +button
+        +svg(22, 25, 'user')
+      +button
+        +svg(22, 25, 'heart')
+      +button
+        +svg(22, 25, 'cart')
+        span.count 4
