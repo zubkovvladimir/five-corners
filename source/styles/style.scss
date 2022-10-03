@@ -1,0 +1,22 @@
+/* normalize.scss */
+@import "../../node_modules/normalize.scss/normalize.scss";
+
+/* Глобальные стили */
+@import "_constants.scss";
+@import "common/global.scss";
+@import "_mixins.scss";
+@import "common/fonts.scss";
+
+/* Библиотеки */
+@import "_libs.scss";
+
+/* ------Блоки------ */
+
+/* Общие */
+@import "blocks/shared/container.scss";
+@import "blocks/shared/button.scss";
+
+/* Header */
+@import "blocks/main-info.scss";
+
+/* Footer */

@@ -1,0 +1,24 @@
+.main-info
+
+  if isMainPage
+    a.main-info__logo.logo
+      +svg(88, 24, 'logo')
+  else
+    a(href="/", tabindex="9").main-info__logo.logo
+      +svg(88, 24, 'logo')
+
+  +button
+    +svg(32, 32, 'location', 'btn__icon --fill-none')
+    span Москва
+
+  +inputSearch
+
+  .main-info__right
+    a(href="/").favorite
+      +svg(15, 14, 'heart')
+      span.button__count 0
+
+    +button('', 'Войти')
+      span.user_name Екатерина
+      img(src="./images/avatar.jpg", alt="Аватар", width=32, height=32)
+
