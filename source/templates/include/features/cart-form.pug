@@ -1,0 +1,22 @@
+.cart-form
+  h2.cart-form__title Корзина
+
+  p.login Есть аккаунт?
+    +button('button', 'Войти')
+
+  form(action="" method="method")
+    +input('Адрес', 'address')
+
+    .map
+      p.map__total Итог:
+        span.map__sum 3790 руб.
+
+    +input('Ваше Имя', 'name')
+    +input('Ваш Телефон', 'phone')
+    +input('Ваше Имя', 'email', 'email')
+    +select('Тип упаковки')
+      option(value="without") без упаковки
+      option(value="standard") стандартная
+      option(value="gift") подарочная
+
+    +input('Введите комментарий', 'comment')
