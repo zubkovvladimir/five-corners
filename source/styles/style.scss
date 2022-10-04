@@ -17,9 +17,13 @@
 @import "blocks/shared/button.scss";
 @import "blocks/shared/input.scss";
 @import "blocks/shared/search.scss";
+@import "blocks/shared/breadcrumbs.scss";
+@import "blocks/shared/select.scss";
 
 /* Header */
 @import "blocks/page-header.scss";
 @import "blocks/main-nav.scss";
 
-/* Footer */
+/* Form */
+@import "blocks/cart-form.scss";
+@import "blocks/map.scss";

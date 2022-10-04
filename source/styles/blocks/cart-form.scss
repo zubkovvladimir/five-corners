@@ -1,0 +1,14 @@
+.cart-form {
+  position: relative;
+
+  &__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    @include desktop {
+      flex-direction: row;
+      width: 505px;
+    }
+  }
+}

@@ -2,11 +2,11 @@ mixin button(text, classnames, type='button')
   button.button(class=classnames, type= type)= text
     block
 
-mixin input(placeholder, name, type="text", classnames)
+mixin input(placeholder, name, classnames, type="text")
   input.input(class=classnames, type=type, name=name, placeholder=placeholder)
 
-mixin select(name)
-  select.select(name=name)
+mixin select(name, classnames)
+  select.select(class=classnames, name=name)
     block
 
 mixin svg(width, height, name, className)

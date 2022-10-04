@@ -78,7 +78,8 @@ task('styles', () => {
     .pipe(autoprefixer())
     .pipe(rename('style.min.css'))
     .pipe(gulpIf(!production, sourcemap.write('.')))
-    .pipe(dest('build'));
+    .pipe(dest('build'))
+    .pipe(browsersync.stream());
 });
 
 task('images', () => {

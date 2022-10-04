@@ -5,28 +5,29 @@
     +button('Войти')
 
   form(action="" method="method")
-    +input('Адрес', 'address')
+    .cart-form__wrap
+      +input('Адрес', 'address', '--full-width')
 
-    .map
-      p.map__total Итог:
-        span.map__sum 3790 руб.
+      .map
+        p.map__total Итог:
+          span.map__sum 3790 руб.
 
-    +input('Ваше Имя', 'name')
-    +input('Ваш Телефон', 'phone')
-    +input('Ваше Имя', 'email', 'email')
-    +select('Тип упаковки')
-      option(value="without") без упаковки
-      option(value="standard") стандартная
-      option(value="gift") подарочная
-    +input('Введите комментарий', 'comment')
+      +input('Ваше Имя', 'name')
+      +input('Ваш Телефон', 'phone')
+      +input('Ваше Email', 'email', '--full-width', 'email')
+      +select('Тип упаковки', '--full-width')
+        option(value="without") без упаковки
+        option(value="standard") стандартная
+        option(value="gift") подарочная
+      +input('Введите комментарий', 'comment', '--full-width')
 
-    .selected-products
-      h2.selected-products__title.title Выбранные товары:
-      include ./products-list
+      .selected-products
+        h2.selected-products__title.title Выбранные товары:
+        include ./products-list
 
-    p.cart-form-total
-      span Итог:
-      span.cart-form-total__sum 3790 руб.
+      p.cart-form-total
+        span Итог:
+        span.cart-form-total__sum 3790 руб.
 
-    +button('Купить', 'submit')
+      +button('Купить', 'submit')
 
