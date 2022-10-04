@@ -5,6 +5,7 @@
 @import "_constants.scss";
 @import "common/global.scss";
 @import "_mixins.scss";
+@import "_functions.scss";
 @import "common/fonts.scss";
 
 /* Библиотеки */
@@ -20,6 +21,7 @@
 @import "blocks/shared/breadcrumbs.scss";
 @import "blocks/shared/select.scss";
 @import "blocks/shared/product.scss";
+@import "blocks/shared/logo.scss";
 
 /* Header */
 @import "blocks/page-header.scss";

@@ -4,9 +4,23 @@
   @include desktop {
     order: 1;
     flex-basis: 100%;
+    margin-top: 40px;
   }
 
   &__item {
+    font-size: rem(18);
+    padding: 0 1px;
+
+    &.--logo {
+      @include desktop {
+        margin: 0 64px;
+      }
+    }
+
+    :hover {
+      color: var(--black);
+    }
+
     &:not(.--logo) {
       display: none;
 
@@ -14,9 +28,19 @@
         display: block;
       }
     }
+
+    &:not(.--logo):not(:last-child):not(:nth-child(3)) {
+      margin-right: 30px;
+    }
   }
 
   &__list {
     display: flex;
+    padding: 0;
+    align-items: flex-end;
+
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--gray);
   }
 }

@@ -1,4 +1,20 @@
 .search {
+  display: flex;
+  align-items: center;
+  color: var(--black);
+
+  &__input {
+    position: relative;
+
+    @include desktop {
+      min-width: 250px;
+    }
+  }
+
+  &__button {
+    margin-right: 20px;
+  }
+
   @include desktop {
     margin-right: auto;
   }

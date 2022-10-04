@@ -1,6 +1,39 @@
 .input {
+  border: none;
+  border-bottom: 1px solid var(--gray);
+  outline: none;
+  padding-bottom: 6px;
+  width: 100%;
+
+  &__placeholder {
+    font-size: rem(18);
+    position: absolute;
+    top: 0;
+    left: 1px;
+    transition: 0.3s;
+    color: var(--gray);
+  }
+
+  &:hover::placeholder,
+  &:focus::placeholder {
+    color: var(--black);
+  }
+
+  &::placeholder {
+    font-size: rem(18);
+  }
+
+  &:focus ~ span {
+    font-size: rem(12);
+    top: -16px;
+  }
+
   &.--search {
     display: none;
+
+    @include desktop {
+      display: inline;
+    }
   }
 
   &.--full-width {

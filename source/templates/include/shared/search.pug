@@ -1,7 +1,9 @@
 .search
 
-  +button
-    span.visually-hidden Поиск
-    +svg(88, 24, 'search')
+  .search__button
+    +button('', '--search --svg-fill-none')
+      span.visually-hidden Поиск
+      +svg(22, 22, 'search')
 
-  +input('Поиск', 'search', '--search', 'search')
+  .search__input
+    +input('Поиск', 'search', '--search', 'search')
