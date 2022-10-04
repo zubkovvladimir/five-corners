@@ -1,0 +1,22 @@
+.main-nav {
+  margin: 0 auto;
+
+  @include desktop {
+    order: 1;
+    flex-basis: 100%;
+  }
+
+  &__item {
+    &:not(.--logo) {
+      display: none;
+
+      @include desktop {
+        display: block;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+  }
+}

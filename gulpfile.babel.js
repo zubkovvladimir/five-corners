@@ -131,7 +131,7 @@ task('clean', () => {
 });
 
 task('watching', () => {
-  watch(path.watch.style, { delay: 1000 }, series('styles', 'refresh'));
+  watch(path.watch.style, series('styles', 'refresh'));
   watch(path.watch.js, { delay: 1000 }, series('refresh'));
   watch(
     [path.watch.pug, path.src.data],

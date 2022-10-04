@@ -16,8 +16,9 @@ html(lang="ru").page
       <include src="source/images/icons/sprite.svg"></include>
     </div>
 
-    include ../include/features/header
+    .container
+      include ../include/features/page-header
 
-    main
-      include ../include/shared/breadcrumbs
-      include ../include/features/cart-form
+      main
+        include ../include/shared/breadcrumbs
+        include ../include/features/cart-form

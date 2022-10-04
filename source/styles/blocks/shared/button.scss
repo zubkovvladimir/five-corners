@@ -1,8 +1,17 @@
 .button {
-  border: none;
-  background-color: transparent;
+  &.--user {
+    display: none;
 
-  .--fill-none {
-    fill: none;
+    @include desktop {
+      display: inline-block;
+    }
+  }
+
+  &.--burger {
+    display: inline-block;
+
+    @include desktop {
+      display: none;
+    }
   }
 }

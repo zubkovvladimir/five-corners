@@ -15,7 +15,7 @@ jobs:
         run: yarn
 
       - name: Run Test 🔨
-        run: yarn run lint
+        run: yarn run test
 
       - name: Build 👷
         run: yarn run build

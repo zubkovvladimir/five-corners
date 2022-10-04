@@ -15,8 +15,11 @@
 /* Общие */
 @import "blocks/shared/container.scss";
 @import "blocks/shared/button.scss";
+@import "blocks/shared/input.scss";
+@import "blocks/shared/search.scss";
 
 /* Header */
-@import "blocks/main-info.scss";
+@import "blocks/page-header.scss";
+@import "blocks/main-nav.scss";
 
 /* Footer */
