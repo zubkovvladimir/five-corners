@@ -19,6 +19,7 @@
 @import "blocks/shared/search.scss";
 @import "blocks/shared/breadcrumbs.scss";
 @import "blocks/shared/select.scss";
+@import "blocks/shared/product.scss";
 
 /* Header */
 @import "blocks/page-header.scss";
@@ -26,4 +27,5 @@
 
 /* Form */
 @import "blocks/cart-form.scss";
+@import "blocks/cart-form-container.scss";
 @import "blocks/map.scss";

@@ -1,0 +1,10 @@
+.cart-form-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  @include desktop {
+    flex-direction: row;
+    width: 505px;
+  }
+}

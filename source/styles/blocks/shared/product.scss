@@ -1,0 +1,16 @@
+.product {
+  display: flex;
+
+  &__img {
+    width: 150px;
+    height: 150px;
+  }
+
+  &__desc {
+    display: none;
+
+    @include desktop {
+      display: inline;
+    }
+  }
+}
