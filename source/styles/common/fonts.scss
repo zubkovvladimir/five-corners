@@ -1,8 +1,4 @@
-// Raleway
+// Helvetica
 
-// @include font-face(
-//   "Raleway",
-//   "./fonts/raleway-v28-latin_cyrillic-regular",
-//   400,
-//   "normal"
-// );
+@include font-face("Helvetica", "./fonts/HelveticaBold", 700, "normal");
+@include font-face("Helvetica", "./fonts/HelveticaRegular", 400, "normal");

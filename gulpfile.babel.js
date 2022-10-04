@@ -4,7 +4,6 @@ const path = {
     js: 'build/js/',
     css: 'build/css/',
     images: 'build/images/',
-    img: 'build/img/',
     fonts: 'build/fonts/',
   },
   src: {
@@ -15,7 +14,6 @@ const path = {
     styleLibsDir: 'source/styles/libs/',
     style: 'source/styles/style.scss',
     images: 'source/images/**/*.{png,jpg,svg,ico}',
-    img: 'source/img/**/*.{png,jpg,svg}',
     fonts: 'source/fonts/**/*.woff',
     icons: 'source/images/**/icon-*.svg',
     data: 'data/data.json',
@@ -84,7 +82,7 @@ task('styles', () => {
 });
 
 task('images', () => {
-  return src(path.src.images, path.src.img)
+  return src(path.src.images)
     .pipe(
       imagemin([
         imagemin.optipng({ optimizationLevel: 2 }),
@@ -92,7 +90,7 @@ task('images', () => {
         svgo(),
       ]),
     )
-    .pipe(dest(path.build.img));
+    .pipe(dest(path.build.images));
 });
 
 task('sprite', () => {
@@ -123,13 +121,13 @@ task('html', () => {
 });
 
 task('copy', () => {
-  return src([path.src.img, path.src.images, path.src.fonts], {
+  return src([path.src.images, path.src.fonts], {
     base: 'source',
   }).pipe(dest('build'));
 });
 
 task('clean', () => {
-  return del('build');
+  return del(['build', 'source/images/icons/sprite.svg']);
 });
 
 task('watching', () => {

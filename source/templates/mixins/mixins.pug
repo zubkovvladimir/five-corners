@@ -1,13 +1,14 @@
-mixin button(type='button', text)
+mixin button(text, type='button')
   button.button(type= type)= text
     block
 
-mixin inputSearch
-  input.input-search(type="text", name="search", placeholder='Учебное заведение, специальность или профессия')
-  +svg(15, 15, 'search')
+mixin input(placeholder, name, type="text")
+  input.input(type=type, name=name, placeholder=placeholder)
+
+mixin select(name)
+  select.select(name=name)
+    block
 
 mixin svg(width, height, name, className)
   svg(width=width height=height class=className)
     use(xlink:href="#icon-" + name)
-
-
