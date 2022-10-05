@@ -11,6 +11,10 @@
   &__item {
     margin-right: 10px;
 
+    &:hover:not(:last-child) {
+      color: var(--black);
+    }
+
     &:last-child {
       margin-right: 0;
       color: var(--black);
