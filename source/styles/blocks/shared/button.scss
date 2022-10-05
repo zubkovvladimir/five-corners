@@ -55,6 +55,15 @@
     }
   }
 
+  &.--link {
+    text-decoration: underline;
+    color: var(--gray);
+
+    &:hover {
+      color: var(--black);
+    }
+  }
+
   &.--cart {
     @include desktop {
       svg {

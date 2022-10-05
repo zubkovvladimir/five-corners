@@ -70,6 +70,10 @@ task('refresh', (done) => {
   done();
 });
 
+task('js', () => {
+  return src(path.src.js).pipe(dest(path.build.js));
+});
+
 task('styles', () => {
   return src(path.src.style)
     .pipe(plumber())
@@ -78,8 +82,7 @@ task('styles', () => {
     .pipe(autoprefixer())
     .pipe(rename('style.min.css'))
     .pipe(gulpIf(!production, sourcemap.write('.')))
-    .pipe(dest('build'))
-    .pipe(browsersync.stream());
+    .pipe(dest('build'));
 });
 
 task('images', () => {
@@ -133,7 +136,7 @@ task('clean', () => {
 
 task('watching', () => {
   watch(path.watch.style, series('styles', 'refresh'));
-  watch(path.watch.js, { delay: 1000 }, series('refresh'));
+  watch(path.watch.js, series('js', 'refresh'));
   watch(
     [path.watch.pug, path.src.data],
     { delay: 1000 },
@@ -141,5 +144,5 @@ task('watching', () => {
   );
 });
 
-task('build', series('clean', 'styles', 'sprite', 'copy', 'html'));
+task('build', series('clean', 'styles', 'sprite', 'js', 'copy', 'html'));
 task('start', series('build', parallel('browserSync', 'watching')));

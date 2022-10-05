@@ -1,18 +1,21 @@
 .cart-form
   h2.cart-form__title.title.--large Корзина
 
-  p.login Есть аккаунт?
-    +button('Войти')
+  .cart-form__login
+    p.login Есть аккаунт?
+      +button('Войти', '--link')
 
   form(action="" method="method")
     .cart-form__container
-      +input('Адрес', 'address', '--full-width')
+      +input('', 'address', '--full-width js-input')
+        span.input__placeholder Адрес
 
       .map
         p.map__total Итог:
           span.map__sum 3790 руб.
 
-      +input('Ваше Имя', 'name')
+      +input('', 'name',  'js-input')
+        span.input__placeholder Ваше Имя
       +input('Ваш Телефон', 'phone')
       +input('Ваше Email', 'email', '--full-width', 'email')
       +select('Тип упаковки', '--full-width')

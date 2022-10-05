@@ -1,5 +1,9 @@
 .title {
   &.--large {
-    font-size: rem(40px);
+    font-size: rem(30px);
+
+    @include desktop {
+      font-size: rem(40px);
+    }
   }
 }

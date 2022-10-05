@@ -3,8 +3,9 @@ mixin button(text, classnames, type='button')
     block
 
 mixin input(placeholder, name, classnames, type="text")
-  input.input(class=classnames, type=type, name=name, placeholder=placeholder)
-  block
+  .input
+    input.input__input(class=classnames, type=type, name=name, placeholder=placeholder)
+    block
 
 mixin select(name, classnames)
   select.select(class=classnames, name=name)
