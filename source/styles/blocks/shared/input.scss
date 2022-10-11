@@ -9,10 +9,11 @@
     left: 1px;
     transition: 0.3s;
     color: var(--gray);
+    pointer-events: none;
 
     &.focused {
       font-size: rem(12);
-      top: -16px;
+      top: -20px;
     }
   }
 

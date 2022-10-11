@@ -1,4 +1,12 @@
 .map {
+  &__total {
+    display: none;
+
+    @include desktop {
+      display: block;
+    }
+  }
+
   @include desktop {
     position: absolute;
     right: 0;

@@ -5593,6 +5593,18 @@ jpegtran-bin@^4.0.0:
     bin-wrapper "^4.0.0"
     logalot "^2.0.0"
 
+jquery-form-styler@2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/jquery-form-styler/-/jquery-form-styler-2.0.2.tgz#0b9aafcb180527ffe1714fc25dec491c33102fef"
+  integrity sha512-gWjOmLq8waIqkt9oCCUspGLvknTesh3m8BjACl250Gb0XRs1ZeRBq3zNqQeDg/eaZjEEbDOS4Wcr4PMHI7IsMg==
+  dependencies:
+    jquery "^1.7.0"
+
+jquery@^1.7.0:
+  version "1.12.4"
+  resolved "https://registry.yarnpkg.com/jquery/-/jquery-1.12.4.tgz#01e1dfba290fe73deba77ceeacb0f9ba2fec9e0c"
+  integrity sha512-UEVp7PPK9xXYSk8xqXCJrkXnKZtlgWkd2GsAQbMRFK6S/ePU2JN5G2Zum8hIVjzR3CpdfSqdqAzId/xd4TJHeg==
+
 js-stringify@^1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/js-stringify/-/js-stringify-1.0.2.tgz#1736fddfd9724f28a3682adc6230ae7e4e9679db"

@@ -7,22 +7,33 @@
 
   form(action="" method="method")
     .cart-form__container
-      +input('', 'address', '--full-width js-input')
-        span.input__placeholder Адрес
 
+      .cart-form__item
+        +input('', 'address', '--full-width js-input')
+          span.input__placeholder Адрес
       .map
         p.map__total Итог:
           span.map__sum 3790 руб.
-
-      +input('', 'name',  'js-input')
-        span.input__placeholder Ваше Имя
-      +input('Ваш Телефон', 'phone')
-      +input('Ваше Email', 'email', '--full-width', 'email')
-      +select('Тип упаковки', '--full-width')
-        option(value="without") без упаковки
-        option(value="standard") стандартная
-        option(value="gift") подарочная
-      +input('Введите комментарий', 'comment', '--full-width')
+      .cart-form__item
+        +input('', 'name',  'js-input')
+          span.input__placeholder Ваше Имя
+      .cart-form__item
+        +input('', 'phone',  'js-input')
+          span.input__placeholder Ваш Телефон
+      .cart-form__item
+        +input('', 'email', '--full-width js-input', 'email')
+          span.input__placeholder Ваше Email
+      .cart-form__item
+        .select
+          select.select__select.--full-width
+            option
+            option(value="without") Без упаковки
+            option(value="standard") Стандартная
+            option(value="gift") Подарочная
+          span.select__placeholder Тип упаковки
+      .cart-form__item
+        +input('', 'comment', '--full-width js-input')
+          span.input__placeholder Введите комментарий
 
       .selected-products
         h2.selected-products__title.title Выбранные товары:

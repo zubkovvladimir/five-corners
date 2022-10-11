@@ -9,7 +9,7 @@ const path = {
   src: {
     pug: 'source/templates/*.pug',
     pugDir: 'source/templates',
-    js: 'source/js/index.js',
+    js: 'source/js/**/*.js',
     styleDir: 'source/styles/',
     styleLibsDir: 'source/styles/libs/',
     style: 'source/styles/style.scss',
@@ -76,12 +76,12 @@ task('js', () => {
 
 task('styles', () => {
   return src(path.src.style)
-    .pipe(plumber())
     .pipe(gulpIf(!production, sourcemap.init()))
     .pipe(sass(gulpIf(production, { outputStyle: 'compressed' })))
     .pipe(autoprefixer())
     .pipe(rename('style.min.css'))
     .pipe(gulpIf(!production, sourcemap.write('.')))
+    .pipe(plumber())
     .pipe(dest('build'));
 });
 

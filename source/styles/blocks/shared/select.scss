@@ -1,4 +1,43 @@
 .select {
+  border: none;
+  border-bottom: 1px solid var(--gray);
+  outline: none;
+  width: 100%;
+  padding-bottom: 6px;
+  font-size: rem(18);
+  color: var(--gray);
+  position: relative;
+
+  &__select {
+    width: 100%;
+  }
+
+  &__placeholder {
+    opacity: 0;
+    font-size: rem(18);
+    position: absolute;
+    top: 0;
+    left: 0px;
+    transition: 0.3s;
+    color: var(--gray);
+    pointer-events: none;
+
+    &.focused {
+      opacity: 1;
+      font-size: rem(12);
+      top: -20px;
+    }
+  }
+
+  &:hover::placeholder,
+  &:focus::placeholder {
+    color: var(--black);
+  }
+
+  &::placeholder {
+    font-size: rem(18);
+  }
+
   &.--full-width {
     width: 100%;
   }

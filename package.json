@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "private": true,
   "description": "Тест",
+  "author": "https://github.com/zubkovvladimir",
   "dependencies": {
     "fs": "0.0.1-security",
+    "jquery-form-styler": "2.0.2",
     "normalize.scss": "0.1.0",
     "sass": "^1.54.9"
   },

@@ -1,0 +1,102 @@
+// libs
+@import "./libs/jquery.formstyler.scss";
+@import "./libs/jquery.formstyler.theme.scss";
+
+.jq-selectbox__select {
+  height: auto;
+  padding: 0;
+  border: none;
+  border-bottom-color: transparent;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+  font: inherit;
+  font-size: var(--font-size-default-desktop);
+  font-family: var(--default-font);
+  color: inherit;
+  text-shadow: none;
+
+  &:hover {
+    background: none;
+  }
+
+  &:active {
+    box-shadow: none;
+  }
+}
+
+.jq-selectbox.focused .jq-selectbox__select {
+  border: none;
+}
+
+.jq-selectbox__trigger {
+  border: none;
+}
+
+.jq-selectbox__trigger-arrow {
+  border: none;
+  transition: 0.3s;
+
+  &::before {
+    @include pseudo(10px, 1px);
+    transition: 0.3s;
+    background-color: var(--black);
+    left: -8px;
+    top: -3px;
+    z-index: 1;
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    @include pseudo(10px, 1px);
+    transition: 0.3s;
+    background-color: var(--black);
+    left: -1px;
+    top: -3px;
+    transform: rotate(135deg);
+  }
+}
+
+.jq-selectbox__dropdown {
+  top: 24px;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 2px 0 0;
+  padding: 0;
+  border: 1px solid var(--gray);
+  border-radius: 0 0 4px 4px;
+  background: #fff;
+  box-shadow: none;
+  font: 14px/18px Arial, sans-serif;
+}
+
+.jq-selectbox {
+  ul {
+    padding: 20px;
+  }
+
+  li {
+    color: var(--gray);
+    padding: 0;
+
+    &:not(:last-child) {
+      padding-bottom: 20px;
+    }
+
+    &:hover {
+      background-color: transparent;
+      color: var(--black);
+    }
+
+    &.selected {
+      background-color: transparent;
+      color: var(--black);
+    }
+  }
+}
+
+.jq-selectbox__select-text {
+  &:not(.placeholder) {
+    color: var(--black);
+  }
+}
