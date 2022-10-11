@@ -14,10 +14,10 @@
       .map
         p.map__total Итог:
           span.map__sum 3790 руб.
-      .cart-form__item
+      .cart-form__item.--half-width
         +input('', 'name',  'js-input')
           span.input__placeholder Ваше Имя
-      .cart-form__item
+      .cart-form__item.--half-width.--ml-auto
         +input('', 'phone',  'js-input')
           span.input__placeholder Ваш Телефон
       .cart-form__item
@@ -36,12 +36,12 @@
           span.input__placeholder Введите комментарий
 
       .selected-products
-        h2.selected-products__title.title Выбранные товары:
+        h2.selected-products__title.title.--medium Выбранные товары:
         include ./products-list
 
       p.cart-form__total
         span Итог:
         span.cart-form-total__sum 3790 руб.
 
-      +button('Купить', 'submit')
+      +button('Купить', 'submit --full-width')
 

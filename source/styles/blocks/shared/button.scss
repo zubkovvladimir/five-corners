@@ -29,6 +29,11 @@
       fill: none;
     }
   }
+
+  &.--full-width {
+    width: 100%;
+  }
+
   &.--user {
     display: none;
 
@@ -56,11 +61,20 @@
   }
 
   &.--link {
-    text-decoration: underline;
     color: var(--gray);
+
+    &::before {
+      @include pseudo(100%, 1px);
+      bottom: 2px;
+      background-color: var(--gray);
+    }
 
     &:hover {
       color: var(--black);
+
+      &::before {
+        background-color: var(--black);
+      }
     }
   }
 

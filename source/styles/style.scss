@@ -24,6 +24,7 @@
 @import "blocks/shared/logo.scss";
 @import "blocks/shared/title.scss";
 @import "blocks/shared/login.scss";
+@import "blocks/shared/counter.scss";
 
 /* Header */
 @import "blocks/page-header.scss";
@@ -35,3 +36,5 @@
 /* Form */
 @import "blocks/cart-form.scss";
 @import "blocks/map.scss";
+@import "blocks/products-list.scss";
+@import "blocks/selected-products.scss";

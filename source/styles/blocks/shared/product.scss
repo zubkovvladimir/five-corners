@@ -8,9 +8,52 @@
 
   &__desc {
     display: none;
+    margin-bottom: 20px;
+    max-width: 150px;
 
     @include desktop {
       display: inline;
     }
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+  &__center {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__right {
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  &__btn {
+    font-size: rem(14);
+
+    @include desktop {
+      font-size: rem(12);
+    }
+  }
+
+  &__price {
+    font-size: rem(16);
+    font-weight: 700;
+
+    @include desktop {
+      font-size: rem(20);
+    }
+  }
+
+  &__counter {
+    margin-top: auto;
+    max-width: 114px;
   }
 }

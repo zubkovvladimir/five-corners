@@ -1,0 +1,18 @@
+.counter {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--black);
+  justify-content: space-between;
+
+  &__button {
+    padding: 0 14px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__count {
+    font-size: rem(20);
+    font-weight: 700;
+  }
+}

@@ -26,4 +26,16 @@
       width: 505px;
     }
   }
+
+  .--half-width {
+    @include desktop {
+      width: 235px;
+    }
+  }
+
+  .--ml-auto {
+    @include desktop {
+      margin-left: auto;
+    }
+  }
 }

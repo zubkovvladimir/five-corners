@@ -5,11 +5,12 @@ ul.products-list
         img.product__img(src=product.img, alt=product.name, width='150', height='150')
 
         .product__center
-          h3.product__title.title=product.name
+          h3.product__title.title.--small=product.name
           p.product__desc=product.description
 
-          include ../shared/counter
+          .product__counter
+            include ../shared/counter
 
         .product__right
-          p.price=product.price
-          +button('Удалить')
+          p.product__price=product.price
+          +button('Удалить', 'product__btn --link')
