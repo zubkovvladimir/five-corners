@@ -1,46 +1,15 @@
-function hidePlaceholder($target) {
-  if ($target.val() !== '') {
-    $target.nextAll('.input__placeholder').first().addClass('focused');
-  } else {
-    $target.nextAll('.input__placeholder').first().removeClass('focused');
-  }
-}
+/* eslint-disable no-undef */
 
-function addFocusEventListeners(targetclass) {
-  $(targetclass).on('focusout', function (e) {
-    hidePlaceholder($(e.target));
-  });
+import { initMap } from './components/map.js';
+import { inputInit } from './components/input.js';
+import { initForm } from './components/form.js';
+import './components/select.js';
 
-  $(targetclass).on('focusin', function (e) {
-    $(e.target).nextAll('.input__placeholder').first().addClass('focused');
-  });
-}
-
-function inputInit() {
-  const array = ['.js-input'];
-  array.forEach(function (item) {
-    addFocusEventListeners(item);
-  });
-}
-
+// анимирование плейсохлдера у инпута
 inputInit();
 
-$('.select__select').styler({
-  selectPlaceholder: 'Тип упаковки',
-  selectSmartPositioning: -1,
-  selectSearch: true,
-  onSelectOpened: function () {
-    $(this)
-      .find('.jq-selectbox__trigger-arrow')
-      .css({ transform: 'rotate(180deg)', top: '12px' });
-  },
-  onSelectClosed: function () {
-    $(this)
-      .find('.jq-selectbox__trigger-arrow')
-      .css({ transform: 'rotate(0deg)', top: '14px' });
-  },
-});
+// форма
+initForm();
 
-$('.select__select').on('change', () => {
-  $('.select__placeholder').addClass('focused');
-});
+// карта
+ymaps.ready(initMap);

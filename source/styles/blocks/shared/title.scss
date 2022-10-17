@@ -1,6 +1,7 @@
 .title {
   &.--large {
     font-size: rem(30px);
+    line-height: 40px;
 
     @include desktop {
       font-size: rem(40px);

@@ -1,31 +1,34 @@
 .cart-form
   h2.cart-form__title.title.--large Корзина
 
+
   .cart-form__login
     p.login Есть аккаунт?
       +button('Войти', '--link')
 
-  form(action="" method="method")
+  form(action="" method="method").js-form
     .cart-form__container
 
       .cart-form__item
-        +input('', 'address', '--full-width js-input')
+        +input('', 'address', '--full-width js-input js-input-address', 'text', 'required')
           span.input__placeholder Адрес
       .map
+        .map__iframe(id='map')
         p.map__total Итог:
           span.map__sum 3790 руб.
+
       .cart-form__item.--half-width
-        +input('', 'name',  'js-input')
+        +input('', 'name',  'js-input', 'text', 'required')
           span.input__placeholder Ваше Имя
       .cart-form__item.--half-width.--ml-auto
-        +input('', 'phone',  'js-input')
+        +input('', 'phone',  'js-input', 'text', 'required')
           span.input__placeholder Ваш Телефон
       .cart-form__item
-        +input('', 'email', '--full-width js-input', 'email')
+        +input('', 'email', '--full-width js-input', 'email', 'required')
           span.input__placeholder Ваше Email
       .cart-form__item
         .select
-          select.select__select.--full-width
+          select.select__select.--full-width(required)
             option
             option(value="without") Без упаковки
             option(value="standard") Стандартная
@@ -43,5 +46,5 @@
         span Итог:
         span.cart-form-total__sum 3790 руб.
 
-      +button('Купить', 'submit --full-width')
+      +button('Купить', 'submit --full-width --outlined', 'submit')
 

@@ -2,9 +2,9 @@ mixin button(text, classnames, type='button')
   button.button(class=classnames, type= type)= text
     block
 
-mixin input(placeholder, name, classnames, type="text")
+mixin input(placeholder, name, classnames, type="text", required=false)
   .input
-    input.input__input(class=classnames, type=type, name=name, placeholder=placeholder)
+    input.input__input(class=classnames, type=type, name=name, placeholder=placeholder, required=required)
     block
 
 mixin select(name, classnames)
