@@ -1,0 +1,22 @@
+header.page-header
+
+  .page-header__burger
+    +button('', '--burger --closed')
+      span.visually-hidden Открыть меню
+
+  include ../shared/search
+
+  include ./main-nav
+
+  .page-header__user
+    +button('', '--user --svg-fill-none')
+      +svg(22, 25, 'user')
+
+  .page-header__heart
+    +button('', '--heart --svg-fill-none')
+      +svg(24, 22, 'heart')
+
+  +button('', '--cart --svg-fill-none')
+    +svg(20, 22, 'cart')
+    p.button__count
+      span 4

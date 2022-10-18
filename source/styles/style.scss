@@ -3,20 +3,38 @@
 
 /* Глобальные стили */
 @import "_constants.scss";
+@import "_functions.scss";
 @import "common/global.scss";
 @import "_mixins.scss";
 @import "common/fonts.scss";
 
 /* Библиотеки */
-@import "_libs.scss";
+@import "./common/libs";
 
 /* ------Блоки------ */
 
 /* Общие */
 @import "blocks/shared/container.scss";
 @import "blocks/shared/button.scss";
+@import "blocks/shared/input.scss";
+@import "blocks/shared/search.scss";
+@import "blocks/shared/breadcrumbs.scss";
+@import "blocks/shared/select.scss";
+@import "blocks/shared/product.scss";
+@import "blocks/shared/logo.scss";
+@import "blocks/shared/title.scss";
+@import "blocks/shared/login.scss";
+@import "blocks/shared/counter.scss";
 
 /* Header */
-@import "blocks/main-info.scss";
+@import "blocks/page-header.scss";
+@import "blocks/main-nav.scss";
 
-/* Footer */
+/* Main */
+@import "blocks/page-main.scss";
+
+/* Form */
+@import "blocks/cart-form.scss";
+@import "blocks/map.scss";
+@import "blocks/products-list.scss";
+@import "blocks/selected-products.scss";

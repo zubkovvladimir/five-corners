@@ -1,0 +1,23 @@
+.breadcrumbs {
+  @include list-reset();
+  display: flex;
+  font-size: rem(18);
+  color: var(--gray);
+
+  &__divider {
+    margin-right: 10px;
+  }
+
+  &__item {
+    margin-right: 10px;
+
+    &:hover:not(:last-child) {
+      color: var(--black);
+    }
+
+    &:last-child {
+      margin-right: 0;
+      color: var(--black);
+    }
+  }
+}

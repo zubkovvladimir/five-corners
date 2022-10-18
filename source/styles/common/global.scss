@@ -1,4 +1,6 @@
-:root {
+:root,
+::after,
+::before {
   // Цвета
   --black: #000000;
 
@@ -11,7 +13,8 @@
 
   // Шрифты
   --default-font: "Helvetica", Arial, sans-serif;
-  --default-font-size-desktop: 16px;
+
+  --font-size-default-desktop: $default-font-size;
 }
 
 html {
@@ -29,15 +32,28 @@ body {
   margin: 0;
   padding: 0;
   font-family: var(--default-font);
-  font-size: var(--default-font-size-desktop);
+  font-size: var(--font-size-default-desktop);
   line-height: 20px;
   font-weight: 400;
   color: $black;
   background-color: $white;
 }
 
-.page a {
+li {
+  list-style: none;
+}
+
+a {
   text-decoration: none;
+  color: inherit;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
 }
 
 img {

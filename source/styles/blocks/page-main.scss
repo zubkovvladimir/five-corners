@@ -1,0 +1,17 @@
+.page-main {
+  &__breadcrumbs {
+    margin-top: 20px;
+
+    @include desktop {
+      margin-top: 30px;
+    }
+  }
+
+  &__cart-form {
+    margin-top: 32px;
+
+    @include desktop {
+      margin-top: 50px;
+    }
+  }
+}

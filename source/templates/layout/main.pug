@@ -2,7 +2,7 @@ block variables
 include ../mixins/mixins.pug
 
 doctype html
-html(lang="ru").page
+html(lang="ru")
   head
     meta(charset="utf-8")
     title Digital — интегратор 5 УГЛОВ
@@ -16,8 +16,18 @@ html(lang="ru").page
       <include src="source/images/icons/sprite.svg"></include>
     </div>
 
-    include ../include/features/header
+    .container
+      include ../include/features/page-header
 
-    main
-      include ../include/shared/breadcrumbs
-      include ../include/features/cart-form
+      main.page-main
+
+        .page-main__breadcrumbs
+          include ../include/shared/breadcrumbs
+        .page-main__cart-form
+          include ../include/features/cart-form
+
+    script(src='https://code.jquery.com/jquery-2.2.4.min.js')
+    script(src="https://api-maps.yandex.ru/1.1/index.xml" type="text/javascript")
+    script(src="https://api-maps.yandex.ru/2.1/?apikey=c2d6df5d-5bf9-4bbc-9bb0-77606b88f841&lang=ru_RU" type="text/javascript")
+    script(src='./js/libs/jquery.formstyler.js')
+    script(src='./js/index.js' type="module")

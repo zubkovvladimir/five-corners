@@ -9,7 +9,7 @@ const path = {
   src: {
     pug: 'source/templates/*.pug',
     pugDir: 'source/templates',
-    js: 'source/js/index.js',
+    js: 'source/js/**/*.js',
     styleDir: 'source/styles/',
     styleLibsDir: 'source/styles/libs/',
     style: 'source/styles/style.scss',
@@ -70,14 +70,18 @@ task('refresh', (done) => {
   done();
 });
 
+task('js', () => {
+  return src(path.src.js).pipe(dest(path.build.js));
+});
+
 task('styles', () => {
   return src(path.src.style)
-    .pipe(plumber())
     .pipe(gulpIf(!production, sourcemap.init()))
     .pipe(sass(gulpIf(production, { outputStyle: 'compressed' })))
     .pipe(autoprefixer())
     .pipe(rename('style.min.css'))
     .pipe(gulpIf(!production, sourcemap.write('.')))
+    .pipe(plumber())
     .pipe(dest('build'));
 });
 
@@ -131,8 +135,8 @@ task('clean', () => {
 });
 
 task('watching', () => {
-  watch(path.watch.style, { delay: 1000 }, series('styles', 'refresh'));
-  watch(path.watch.js, { delay: 1000 }, series('refresh'));
+  watch(path.watch.style, series('styles', 'refresh'));
+  watch(path.watch.js, series('js', 'refresh'));
   watch(
     [path.watch.pug, path.src.data],
     { delay: 1000 },
@@ -140,5 +144,5 @@ task('watching', () => {
   );
 });
 
-task('build', series('clean', 'styles', 'sprite', 'copy', 'html'));
+task('build', series('clean', 'styles', 'sprite', 'js', 'copy', 'html'));
 task('start', series('build', parallel('browserSync', 'watching')));
